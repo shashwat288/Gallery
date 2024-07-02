@@ -16,7 +16,7 @@ function Hero() {
   };
 
   return (
-    <div className="relative bg-cover bg-center h-screen" style={{ backgroundImage: `url('https://cdn.mos.cms.futurecdn.net/Hk6kaW8v9YjS6B4HJhnrtd-1200-80.jpg')` }}>
+    <div className="relative bg-cover bg-center h-screen" style={{ backgroundImage: `url('https://efirq7mmtwd.exactdn.com/wp-content/uploads/2023/05/photogrphers-portfolio-on-laptop.jpg?lossy=1&ssl=1')` }}>
       <div className="absolute inset-0 bg-black opacity-55">
         <div className="container mx-auto px-6 py-24 text-center ">
           <h1 className="text-5xl font-bold text-white mb-4 mt-40">
