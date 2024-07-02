@@ -59,34 +59,34 @@ function Photos() {
   };
 
   return (
-    <div className="flex flex-col mt-10 h-screen bg-gray-300 bg-opacity-50">
-  <div className="container mx-auto mt-10 flex-1">
-    <div className="grid grid-cols-3 gap-4 sm:grid-cols-2 md:grid-cols-3">
-      {imgUrl.map((dataVal, index) => (
-        <div key={index} className="relative rounded-lg overflow-hidden border border-black p-2">
-          <img src={dataVal} alt={`Image ${index}`} className="object-cover h-60 w-full" />
-          <button className="absolute bottom-0 right-0 bg-white bg-opacity-50 py-1 px-2 rounded-full border border-gray-300 flex items-center justify-center">
-            <a href={dataVal} download className="text-gray-500 hover:text-gray-700">
-              <FontAwesomeIcon icon={faDownload} />
-            </a>
+    <div className="flex flex-col mt-10  h-screen bg-gray-300 bg-opacity-50">
+      <div className="container mx-auto mt-10 flex-1">
+        <div className="grid grid-cols-3 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {imgUrl.map((dataVal, index) => (
+            <div key={index} className="relative rounded-lg overflow-hidden border border-black p-2">
+              <img src={dataVal} alt={`Image ${index}`} className="object-cover h-60 w-full" />
+              <button className="absolute bottom-0 right-0 bg-white bg-opacity-50 py-1 px-2 rounded-full border border-gray-300 flex items-center justify-center">
+                <a href={dataVal} download className="text-gray-500 hover:text-gray-700">
+                  <FontAwesomeIcon icon={faDownload} />
+                </a>
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+      <footer className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 py-4 px-4">
+        <div className="flex justify-center">
+          <label htmlFor="fileInput" className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer hover:bg-blue-700">
+            <FontAwesomeIcon icon={faUpload} className="mr-2" />
+            {fileName}
+          </label>
+          <input type="file" id="fileInput" onChange={handleFileChange} className="hidden" />
+          <button onClick={handleClick} className={`bg-blue-500 text-white px-4 py-2 rounded ml-4 hover:bg-blue-700 ${(!img || isUploading) ? 'opacity-50 cursor-not-allowed' : ''}`}>
+            {isUploading ? 'Uploading...' : 'Upload'}
           </button>
         </div>
-      ))}
+      </footer>
     </div>
-  </div>
-  <footer className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 py-4 px-4">
-    <div className="flex justify-center">
-      <label htmlFor="fileInput" className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer hover:bg-blue-700">
-        <FontAwesomeIcon icon={faUpload} className="mr-2" />
-        {fileName}
-      </label>
-      <input type="file" id="fileInput" onChange={handleFileChange} className="hidden" />
-      <button onClick={handleClick} className={`bg-blue-500 text-white px-4 py-2 rounded ml-4 hover:bg-blue-700 ${(!img || isUploading)? 'opacity-50 cursor-not-allowed' : ''}`}>
-        {isUploading? 'Uploading...' : 'Upload'}
-      </button>
-    </div>
-  </footer>
-</div>
   );
 }
 
