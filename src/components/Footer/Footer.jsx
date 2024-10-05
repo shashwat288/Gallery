@@ -16,7 +16,7 @@ function Footer() {
   return (
     <div className="bg-gray-800 py-12 text-center">
       <p className="text-white">
-        &copy; {new Date().getFullYear()} PhotoBazi. All rights reserved.
+        &copy; {new Date().getFullYear()} PixelCloud. All rights reserved.
       </p>
       <p className="text-white">
         Current time  India: {time.toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' })}
